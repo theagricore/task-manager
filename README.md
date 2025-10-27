@@ -1,16 +1,23 @@
-# task_manager
+# 🧾 task_manager
 
-A new Flutter project.
+A Flutter application that demonstrates **API integration** and **network connectivity handling**.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🚀 Overview
 
-A few resources to get you started if this is your first Flutter project:
+This project calls an API to **fetch notifications** and includes functionality to **navigate to a "No Network" page** automatically when the internet connection is lost.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Features
+
+- 🔔 Fetch notifications from an API  
+- 🌐 Detect internet connectivity  
+- 🚫 Navigate to a “No Network” screen when offline  
+- 📱 Built with Flutter’s clean and structured architecture
+
+---
+
+## 📂 Project Structure
+
