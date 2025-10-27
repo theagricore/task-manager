@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 
 class HeadingSubheading extends StatelessWidget {
@@ -18,10 +19,24 @@ class HeadingSubheading extends StatelessWidget {
       children: [
         Text(
           heading,
-          style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          style: GoogleFonts.quicksand(
+            textStyle: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+            ),
+          ),
         ),
         if (subheading != null && subheading!.isNotEmpty)
-          Text(subheading!, style: const TextStyle(fontSize: 18, color: kGreen)),
+          Text(
+            subheading!,
+            style: GoogleFonts.quicksand(
+              textStyle: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                color: kGreen,
+              ),
+            ),
+          ),
       ],
     );
   }

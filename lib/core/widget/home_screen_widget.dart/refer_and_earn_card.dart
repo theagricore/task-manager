@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 
-// ignore: camel_case_types
-class Refer_Earn extends StatelessWidget {
-  const Refer_Earn({
+class ReferEarn extends StatelessWidget {
+  const ReferEarn({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -29,17 +29,35 @@ class Refer_Earn extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Refer & Earn",
-                  style: TextStyle(color: kWhite, fontSize: 22),
+                Row(
+                  children: [
+                    const SizedBox(
+                      width: 8,
+                    ),
+                    Text(
+                      "Refer & Earn",
+                      style: GoogleFonts.quicksand(
+                        textStyle: const TextStyle(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 22,
+                          color: kWhite,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Row(
                   children: [
-                    const Text(
+                    Text(
                       "Invite your friends & earn 15% off",
-                      style: TextStyle(
-                        color: kWhite,
-                        fontSize: 16,
+                      style: GoogleFonts.quicksand(
+                        textStyle: const TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 15,
+                          color: kWhite,
+                          letterSpacing: 0,
+                          wordSpacing: 0,
+                        ),
                       ),
                     ),
                     SizedBox(width: screenWidth * 0.01),

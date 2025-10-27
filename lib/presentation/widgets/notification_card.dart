@@ -10,3 +10,4 @@ class NotificationCard extends StatelessWidget {
     return Scaffold();
   }
 }
+

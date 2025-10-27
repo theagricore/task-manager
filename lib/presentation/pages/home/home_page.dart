@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 import 'package:task_manager/core/widget/home_screen_widget.dart/home_body.dart';
 
@@ -16,23 +17,27 @@ class _HomeScreenState extends State<HomePage> {
     double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.location_on, color: kGreen, size: 24),
-            SizedBox(width: 4),
+            const Icon(Icons.location_on, color: kGreen, size: 24),
+            const SizedBox(width: 4),
             Flexible(
               child: Text(
                 "ABCD, New Delhi",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: GoogleFonts.quicksand(
+                    textStyle: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w800,
+                )),
                 overflow: TextOverflow.ellipsis,
               ),
             ),
-            Icon(Icons.expand_more, color: kGreen, size: 24),
+            const Icon(Icons.expand_more, color: kGreen, size: 24),
           ],
         ),
       ),
-      body: Home_body(screenWidth: screenWidth, screenHeight: screenHeight),
+      body: HomeBody(screenWidth: screenWidth, screenHeight: screenHeight),
     );
   }
 }

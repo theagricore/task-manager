@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:task_manager/core/constant.dart';
 
 class CategoryCard extends StatelessWidget {
   final String title;
@@ -53,9 +55,11 @@ class CategoryCard extends StatelessWidget {
             Text(
               title,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.normal,
+              style: GoogleFonts.quicksand(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                ),
               ),
             ),
           ],
@@ -73,10 +77,12 @@ class CategoryCard extends StatelessWidget {
               ),
               child: Text(
                 discountText!,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                  fontWeight: FontWeight.bold,
+                style: GoogleFonts.quicksand(
+                  textStyle: const TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 8,
+                    color: kWhite,
+                  ),
                 ),
               ),
             ),

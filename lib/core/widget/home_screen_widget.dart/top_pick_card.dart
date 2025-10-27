@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 
-class Top_pick_Card extends StatelessWidget {
-  const Top_pick_Card({
+class TopPickCard extends StatelessWidget {
+  const TopPickCard({
     super.key,
     required this.screenHeight,
     required this.screenWidth,
@@ -15,7 +16,7 @@ class Top_pick_Card extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: screenHeight * 0.20,
+      height: screenHeight * 0.25,
       decoration: BoxDecoration(
         color: kGreen,
         borderRadius: BorderRadius.circular(10),
@@ -29,16 +30,22 @@ class Top_pick_Card extends StatelessWidget {
                   MainAxisAlignment.center, // Center vertically
               crossAxisAlignment: CrossAxisAlignment.start, // Align left
               children: [
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 16.0),
+                 Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    "Discount 25% All Fruits",
-                    style: TextStyle(color: kWhite, fontSize: 22),
+                    "DISCOUNT 25% ALL FRUITS",
+                    style: GoogleFonts.quicksand(
+                textStyle:  const TextStyle(
+                  fontWeight: FontWeight.w900,
+                  fontSize: 22,
+                  color: kWhite
+                ),
+              ),
                   ),
                 ),
                 const SizedBox(height: 10),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 11.0),
                   child: SizedBox(
                     width: screenWidth * 0.6,
                     height: screenHeight * 0.05,
@@ -53,7 +60,7 @@ class Top_pick_Card extends StatelessWidget {
                         ),
                       ),
                       child: const Text(
-                        "Check Now",
+                        "CHECK NOW",
                         style: TextStyle(color: kWhite),
                       ),
                     ),

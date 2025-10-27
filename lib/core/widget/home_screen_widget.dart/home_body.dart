@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 import 'package:task_manager/core/widget/custom_heading.dart';
 import 'package:task_manager/core/widget/home_screen_widget.dart/category_bar.dart';
@@ -9,10 +10,8 @@ import 'package:task_manager/core/widget/home_screen_widget.dart/search_bar.dart
 import 'package:task_manager/core/widget/home_screen_widget.dart/top_pick_card.dart';
 
 import 'trending_card.dart';
-
-// ignore: camel_case_types
-class Home_body extends StatelessWidget {
-  const Home_body({
+class HomeBody extends StatelessWidget {
+  const HomeBody({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -29,32 +28,43 @@ class Home_body extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // Search Bar
             SeatchBar(screenWidth: screenWidth),
-            SizedBox(height: screenHeight * 0.05),
-            const Text(
+            SizedBox(height: screenHeight * 0.02),
+            Text(
               "What would you like to day today?",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              style: GoogleFonts.quicksand(
+                textStyle: const TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 20,
+                ),
+              ),
             ),
             SizedBox(height: screenHeight * 0.01),
             //Category Bar
             const CategoryBar1(),
             SizedBox(height: screenHeight * 0.02),
-            const Row(
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("More", style: TextStyle(color: kGreen, fontSize: 23)),
-                Icon(Icons.expand_more, color: kGreen, size: 26),
+                Text(
+                  "More",
+                  style: GoogleFonts.quicksand(
+                    textStyle: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 17,
+                        color: kGreen),
+                  ),
+                ),
+                const Icon(Icons.expand_more, color: kGreen, size: 26),
               ],
             ),
             SizedBox(height: screenHeight * 0.02),
             const HeadingSubheading(heading: "Top Pick for you"),
             SizedBox(height: screenHeight * 0.02),
             //Top Pick Card
-            Top_pick_Card(screenHeight: screenHeight, screenWidth: screenWidth),
+            TopPickCard(screenHeight: screenHeight, screenWidth: screenWidth),
             const HeadingSubheading(heading: "Trending", subheading: "See all"),
             //Trending Card
             SizedBox(
@@ -67,7 +77,7 @@ class Home_body extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
                       width: screenWidth * 0.65,
-                      child: Trending_Card(
+                      child: TrendingCard(
                         screenWidth: screenWidth,
                         screenHeight: screenHeight,
                       ),
@@ -86,7 +96,7 @@ class Home_body extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: SizedBox(
                       width: screenWidth * 0.65,
-                      child: Trending_Card(
+                      child: TrendingCard(
                         screenWidth: screenWidth,
                         screenHeight: screenHeight,
                       ),
@@ -106,7 +116,7 @@ class Home_body extends StatelessWidget {
                   return SizedBox(
                     width: screenWidth * 0.99,
                     height: screenHeight * 0.18,
-                    child: craze_deal_card(
+                    child: CrazeDealCard(
                       screenWidth: screenWidth,
                       screenHeight: screenHeight,
                     ),
@@ -116,9 +126,10 @@ class Home_body extends StatelessWidget {
             ),
             SizedBox(height: screenHeight * 0.02),
             //Refer and Earn Card
-            Refer_Earn(screenWidth: screenWidth, screenHeight: screenHeight),
+            ReferEarn(screenWidth: screenWidth, screenHeight: screenHeight),
             SizedBox(height: screenHeight * 0.02),
-            const HeadingSubheading(heading: "Nearby stores", subheading: "See all"),
+            const HeadingSubheading(
+                heading: "Nearby stores", subheading: "See all"),
             SizedBox(height: screenHeight * 0.02),
             //Near By Store Card
             NearbyStoreCard(
@@ -141,9 +152,14 @@ class Home_body extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),
                 ),
-                child: const Text(
+                child: Text(
                   "View all stores",
-                  style: TextStyle(color: kWhite, fontSize: 18),
+                  style: GoogleFonts.quicksand(
+                    textStyle: const TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 18,
+                        color: kWhite),
+                  ),
                 ),
               ),
             ),

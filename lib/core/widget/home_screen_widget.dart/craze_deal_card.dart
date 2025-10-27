@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 
-class craze_deal_card extends StatelessWidget {
-  const craze_deal_card({
+class CrazeDealCard extends StatelessWidget {
+  const CrazeDealCard({
     super.key,
     required this.screenWidth,
     required this.screenHeight,
@@ -17,7 +18,7 @@ class craze_deal_card extends StatelessWidget {
       padding: const EdgeInsets.all(19.0),
       child: Container(
         width: screenWidth,
-        height: screenHeight * 0.18,
+        height: screenHeight * 0.20,
         decoration: BoxDecoration(
           color: kBlack,
           borderRadius: BorderRadius.circular(8),
@@ -31,13 +32,13 @@ class craze_deal_card extends StatelessWidget {
               top: 0,
               child: Image.asset(
                 "assets/icons/vegitable_fly.png",
-                fit: BoxFit.cover,
+                fit: BoxFit.fitWidth,
                 height: screenHeight * 0.18,
               ),
             ),
 
             // ✍️ Text content
-            const Positioned(
+            Positioned(
               left: 16,
               top: 24,
               child: Column(
@@ -45,22 +46,28 @@ class craze_deal_card extends StatelessWidget {
                 children: [
                   Text(
                     "Customer favourite \ntop supermarkets",
-                    style: TextStyle(
-                      color: kWhite,
-                      wordSpacing: 7,
-                      letterSpacing: 2,
-                      fontSize: 29,
-                      fontWeight: FontWeight.bold,
+                    style: GoogleFonts.quicksand(
+                      textStyle: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 28,
+                        color: kWhite,
+                      ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
                       Text(
                         "Explore ",
-                        style: TextStyle(color: kOrange, fontSize: 17),
+                        style: GoogleFonts.quicksand(
+                          textStyle: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17,
+                            color: kOrange,
+                          ),
+                        ),
                       ),
-                      Icon(Icons.arrow_forward, color: kOrange),
+                      const Icon(Icons.arrow_forward, color: kOrange),
                     ],
                   ),
                 ],

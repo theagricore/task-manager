@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:task_manager/core/constant.dart';
 
 class NearbyStoreCard extends StatelessWidget {
@@ -39,28 +40,32 @@ class NearbyStoreCard extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
+                            Text(
                               "Mithas Bhandar",
-                              style: TextStyle(
-                                fontSize: 19,
-                                fontWeight: FontWeight.w600,
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                  fontWeight: FontWeight.w800,
+                                  fontSize: 19,
+                                ),
                               ),
                             ),
                             SizedBox(height: screenHeight * 0.01),
-                            const Text(
+                            Text(
                               "Sweets, North Indian",
-                              style: TextStyle(
-                                fontSize: 15,
-                                color: kGrey,
-                                fontWeight: FontWeight.normal,
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 15,
+                                ),
                               ),
                             ),
-                            const Text(
+                            Text(
                               "site No - 1 | 6.4 kms",
-                              style: TextStyle(
-                                fontSize: 13,
-                                color: kGrey,
-                                fontWeight: FontWeight.normal,
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 13,
+                                ),
                               ),
                             ),
                             Container(
@@ -70,10 +75,14 @@ class NearbyStoreCard extends StatelessWidget {
                                 color: Colors.black12,
                                 borderRadius: BorderRadius.circular(4),
                               ),
-                              child: const Center(
+                              child: Center(
                                 child: Text(
                                   'Top Store',
-                                  style: TextStyle(fontSize: 9),
+                                  style: GoogleFonts.quicksand(
+                                    textStyle: const TextStyle(
+                                        fontSize: 9,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
                               ),
                             ),
@@ -82,16 +91,26 @@ class NearbyStoreCard extends StatelessWidget {
                       ),
                       SizedBox(
                         width: screenWidth * 0.18,
-                        child: const Column(
+                        child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
                               "★ 4.1",
-                              style: TextStyle(color: kGrey, fontSize: 17),
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 17,
+                                    color: Colors.black54),
+                              ),
                             ),
                             Text(
                               "45 mins",
-                              style: TextStyle(color: kOrange, fontSize: 18),
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    fontSize: 18,
+                                    color: kOrange),
+                              ),
                             ),
                           ],
                         ),
@@ -111,10 +130,15 @@ class NearbyStoreCard extends StatelessWidget {
                             height: screenHeight * 0.02,
                           ),
                           SizedBox(width: screenWidth * 0.01),
-                          const Text(
+                          Text(
                             "Upto 10% OFF",
                             overflow: TextOverflow.ellipsis,
-                            style: TextStyle(fontSize: 12),
+                            style: GoogleFonts.quicksand(
+                              textStyle: const TextStyle(
+                                fontWeight: FontWeight.w700,
+                                fontSize: 11,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -128,10 +152,15 @@ class NearbyStoreCard extends StatelessWidget {
                               height: screenHeight * 0.02,
                             ),
                             SizedBox(width: screenWidth * 0.01),
-                            const Text(
+                            Text(
                               "3400+ items available",
                               overflow: TextOverflow.ellipsis,
-                              style: TextStyle(fontSize: 12),
+                              style: GoogleFonts.quicksand(
+                                textStyle: const TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 11,
+                                ),
+                              ),
                             ),
                           ],
                         ),

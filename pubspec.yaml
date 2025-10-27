@@ -39,6 +39,7 @@ dependencies:
   flutter_bloc: ^9.1.0
   fluttertest: ^0.0.1
   get_it: ^7.7.0
+  google_fonts: ^6.3.0
   google_sign_in: ^6.2.2
   lucide_icons_flutter: ^3.0.7
   shared_preferences: ^2.2.2
